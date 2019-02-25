@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js Lesson-02 task 01 Homework </title>
+</head>
+
+<body>
+    <h2>Bocharova Nalaliya FEA12</h2>
+    <h3>Lesson-02 task 01</h3>
+    <p> <b> Задание:</b> Создайте пустой массив letters. Создайте строку из нескольких слов.<br> Напилите код, который разбивает эту строку на массив слов <br>и пушит в массив letters первый символ каждого слова. <br>Выведите результат в консоль <br>Объедините
+        все элементы массива letters в одну строку и выведите ее в консоль</p>
+    <br><br>
+
+    <script>
+        var letters = [];
+        var text = "Сайт рыбатекст поможет верстальщику сгенерировать несколько абзацев осмысленного текста";
+        var words = [];
+        words = text.split(" ");
+
+        for (i = 0; i < words.length; i++) {
+            firstChar = words[i].charAt(0);
+            letters.push(firstChar);
+        }
+    </script>
+    <p>Массив letters из первых символов каждого слова массива words: <br><br>
+        <script>
+            document.write(letters);
+        </script>
+        <br><br>
+        <p>Все элементы массива letters объединены в одну строку: <br><br>
+            <script>
+                var lettersStr = letters.join("");
+                document.write(lettersStr);
+            </script>
+</body>
+
+</html>
